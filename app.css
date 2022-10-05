@@ -1,0 +1,21 @@
+.digicode{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap: 20px 3px;
+    margin-right: 110vh;
+}
+
+.box{
+    border: 1px solid rgb(155, 155, 155);
+    width: 15vh;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    background: rgb(232,232,232);
+background: linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(207,239,255,1) 35%, rgba(0,212,255,1) 100%);
+box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+font-family: 'Courier New', Courier, monospace;
+border-radius: 30px;
+}
