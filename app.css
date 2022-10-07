@@ -2,8 +2,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px 110px;
-    
-    width: 67vh;
+    grid-template-areas: 
+    "result result result"
+    "a b c";
+    border: 1px solid #a5c4d4;
+    padding: 15px;
+    border-radius: 20px;
+}
+body{
+    background: #36151e;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .box{
@@ -15,22 +23,26 @@
     align-items: center;
     font-size: 5em;
     background: rgb(232,232,232);
-    background: linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(207,239,255,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, #a5c4d4 0%, rgba(207,239,255,1) 35%, #7b6d8d 100%);
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-    font-family: 'Courier New', Courier, monospace;
     border-radius: 20px;
     font-weight: 700;
+    color: #36151e;
+}
+.box:hover{
+    border: 1px solid black;
 }
 .result{
     border: 1px solid black;
-    background: rgb(70, 70, 70);
-    color: blanchedalmond;
+    background: #593f62;
+    color: #a5c4d4;
     height: 12vh;
-    width: 60vh;
+    width: 100%;
     margin-bottom: 30px;
     font-size: 7em;
     display: flex;
     justify-content: flex-end;
+    grid-area: result;
 }
 .container{
     display: flex;

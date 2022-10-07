@@ -83,7 +83,7 @@ else if (result.innerText.length === 4){
 }
 else if (result.innerText.length === 5){
     result.innerText = "";
-    result.style.background = "rgb(70, 70, 70)"
+    result.style.background = "#593f62"
 }
 };
 
