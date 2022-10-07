@@ -49,13 +49,55 @@ hashtag.addEventListener("click", function() {
     result.innerText += hashtag.innerText;
 });
 
-let table = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-function randomDiv(){
-    let random = Math.floor(Math.random()*table.length);
-    let value = table[random];
-    console.log(value);
-    one.innerText = value;
-};
-randomDiv();
+function nbRandomInDiv() {
+//on crée un tableau vide
+let randomNumbers = [];
 
-//https://askcodez.com/comment-rendre-aleatoire-shuffle-un-tableau-javascript.html
+//on met les chiffres randoms qui devront être différents dans un tableau
+for (let i = 0; i < 100; i++) {
+//calcul d'un chiffre entre 0 et 9
+let nbRandom = Math.floor(Math.random() * (9 - 0 + 1)) + 0;
+if (randomNumbers.includes(nbRandom)) {
+        
+} else {
+    randomNumbers.push(nbRandom);
+        
+    }
+};
+one.innerText = randomNumbers[0];
+two.innerText = randomNumbers[1];
+three.innerText = randomNumbers[2];
+four.innerText = randomNumbers[3];
+five.innerText = randomNumbers[4];
+six.innerText = randomNumbers[5];
+seven.innerText = randomNumbers[6];
+eight.innerText = randomNumbers[7];
+nine.innerText = randomNumbers[8];
+zero.innerText = randomNumbers[9];
+console.log(result.innerText);
+if(result.innerText === "1234"){
+    result.style.background = "green";
+}
+else if (result.innerText.length === 4){
+    result.style.background = "red";
+}
+else if (result.innerText.length === 5){
+    result.innerText = "";
+    result.style.background = "rgb(70, 70, 70)"
+}
+};
+
+nbRandomInDiv();
+one.addEventListener("click", nbRandomInDiv);
+two.addEventListener("click", nbRandomInDiv);
+three.addEventListener("click", nbRandomInDiv);
+four.addEventListener("click", nbRandomInDiv);
+five.addEventListener("click", nbRandomInDiv);
+six.addEventListener("click", nbRandomInDiv);
+seven.addEventListener("click", nbRandomInDiv);
+eight.addEventListener("click", nbRandomInDiv);
+nine.addEventListener("click", nbRandomInDiv);
+zero.addEventListener("click", nbRandomInDiv);
+
+
+
